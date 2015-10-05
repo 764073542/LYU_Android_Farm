@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/xml_bg_btn_single" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="风扇控制"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#00aa11" />
+
+    <Button
+        android:id="@+id/btn_fancontroler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/btn_fan_close"
+        android:onClick="FanControler" />
+
+    <ProgressBar
+        android:id="@+id/Progress_fan_open"
+        android:layout_width="96px"
+        android:layout_height="96px"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:indeterminateDrawable="@anim/fan_loging"
+        android:visibility="gone" />
+
+</RelativeLayout>

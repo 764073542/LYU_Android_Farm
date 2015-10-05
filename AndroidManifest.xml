@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.farm.MainActivity"
+    android:versionCode="2"
+    android:versionName="2.0" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ico_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.farm.MainActivity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.farm.MainActivity.AlarmReceiver"
+            android:process=":remote" >
+        </receiver>
+
+        <service android:name="com.farm.service.NetService" >
+        </service>
+
+        <activity
+            android:name="com.farm.MainActivity.LightActivity"
+            android:theme="@android:style/Theme.InputMethod" >
+        </activity>
+        <activity
+            android:name="com.farm.MainActivity.FanActivity"
+            android:theme="@android:style/Theme.InputMethod" >
+        </activity>
+        <activity android:name="com.farm.MainActivity.SettingActivity" >
+        </activity>
+        <activity
+            android:name="com.farm.MainActivity.HeaterControl"
+            android:theme="@android:style/Theme.InputMethod" >
+        </activity>
+        <activity
+            android:name="com.farm.MainActivity.WaterControl"
+            android:theme="@android:style/Theme.InputMethod" >
+        </activity>
+        <activity
+            android:name="com.farm.MainActivity.WindowControl"
+            android:theme="@android:style/Theme.InputMethod" >
+        </activity>
+        <activity
+            android:name="com.farm.MainActivity.ImageFan"
+            android:theme="@android:style/Theme.InputMethod" >
+        </activity>
+        <activity android:name="com.farm.MainActivity.DebugActivity" >
+        </activity>
+        <activity android:name="com.farm.MainActivity.AboutUS" >
+        </activity>
+        <activity android:name="com.farm.MainActivity.ProblemsActivity" >
+        </activity>
+        <activity android:name="com.farm.MainActivity.MenuActivity" >
+        </activity>
+        <activity android:name="com.farm.MainActivity.ClockActivity" >
+        </activity>
+    </application>
+
+</manifest>

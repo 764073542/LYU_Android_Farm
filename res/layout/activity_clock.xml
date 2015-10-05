@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/xml_bg_btn_single" >
+
+    <Button
+        android:id="@+id/btn_clock_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_clock_submit"
+        android:layout_alignBottom="@+id/btn_clock_submit"
+        android:layout_alignRight="@+id/timePicker"
+        android:onClick="onCancel"
+        android:text="取消" />
+
+    <Button
+        android:id="@+id/btn_clock_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/timePicker"
+        android:layout_below="@+id/timePicker"
+        android:onClick="onSubmit"
+        android:text="提交" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="请按照下面的提示输入控制命令" />
+
+    <TimePicker
+        android:layout_centerHorizontal="true"
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_selector"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="请输入将要执行的命令的时间" />
+
+    <Spinner
+        android:id="@+id/spinner_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="26dp" />
+
+</RelativeLayout>
